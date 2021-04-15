@@ -306,6 +306,7 @@
                 checkColumn(conflitos, event.target, numbers); // Verifica conflitos na mesma coluna
                 checkSquare(conflitos, event.target, numbers); // Verifica conflitos no mesmo quadrado local
                 if (conflitos.length > 0) { // Se retornou conflitos...
+                    event.target.value = 0;
                     alert([...new Set(conflitos)].join('\n')); // ...remove os duplicados e exibe mensagem
                 }
             }
@@ -341,7 +342,7 @@
             let c = getCol(i);
             let ini = c; // Inicia no índice da primeira célula da coluna
             let fim = ini+(8*9); // Termina no índice da última célula da linha
-            for (r = ini; r < fim; r=r+9){ // Para cada celula da coluna...
+            for (r = ini; r <= fim; r=r+9){ // Para cada celula da coluna...
                 if (numbers[r] != element){ // Se não for a própria célula (que obviamente tem o mesmo valor)...
                     if (numbers[r].value == compareValue){ // Se encontrou um conflito..
                         conflitos.push(`O número ${compareValue} está em conflito com a linha ${getRow(r)+1} nesta coluna;`); // ...adiciona o conflito na lista
@@ -358,7 +359,6 @@
             let compareValue = value == 0 ? element.value : value; // Escolhe a orige comparação (célula ou valor)
             let ini = getSquare(getIndex(element)); // Inicia no índice da primeira célula do quadrado local (a mais a esquerda e mais acima)
             let fim = ini+27; // Termina no índice da última célula do quadrado local (a mais a direita e mais abaixo)
-
             // Para cada célula do quadrado local...
             for (r = ini; r < fim; r = r+9){ // Linhas (r=índice onde começa a linha do quadrado)
                 for (c = 0; c < 3; c++){ // Colunas (c=offset da coluna no quadrado, começando por r)
