@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cuprum">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <meta name="author" content="Dídimo Vieira de Araújo Junior">
+    <meta name="description" content="A Sudoku game in pure HTML, CSS and Javascript.">
+    <meta name="keywords" content="html, css, javascript, sudoku">
     <title>Sudoku</title>
     <style>
         * {
@@ -26,23 +27,24 @@
         }
         .options {
             display: flex;
+            flex-grow: 1;
             flex-direction: column;
             background-color: cornsilk;
-            padding: 10px;
+            padding: 15px;
         }
         .options h1 {
-            font-family: Cuprum;
+            font-family: Georgia, 'Times New Roman', Times, serif;
             font-size: 4rem;
         }
         .options p {
             margin: 20px 0;
-            font-family: Roboto;
+            font-family: Helvetica, Arial;
             font-size: 1rem;
             overflow-wrap: break-word;
         } 
         .options div {
             margin: 20px 0;
-            font-family: Roboto;
+            font-family: Helvetica, Arial;
             font-size: 0.8rem;
         } 
         #btnNewGame {
@@ -96,104 +98,104 @@
 <body id="game">
     <div class="wrapper">
         <div class="table">
-            <div class="cellA"><select name="number" id="n0"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
-            <div class="cellA"><select name="number" id="n1"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
-            <div class="cellA"><select name="number" id="n2"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
-            <div class="cellB"><select name="number" id="n3"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
-            <div class="cellB"><select name="number" id="n4"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
-            <div class="cellB"><select name="number" id="n5"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
-            <div class="cellA"><select name="number" id="n6"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
-            <div class="cellA"><select name="number" id="n7"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
-            <div class="cellA"><select name="number" id="n8"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellA"><select name="number" id="n0"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellA"><select name="number" id="n1"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellA"><select name="number" id="n2"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellB"><select name="number" id="n3"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellB"><select name="number" id="n4"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellB"><select name="number" id="n5"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellA"><select name="number" id="n6"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellA"><select name="number" id="n7"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellA"><select name="number" id="n8"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
 
-            <div class="cellA"><select name="number" id="n9"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
-            <div class="cellA"><select name="number" id="n10"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
-            <div class="cellA"><select name="number" id="n11"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
-            <div class="cellB"><select name="number" id="n12"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
-            <div class="cellB"><select name="number" id="n13"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
-            <div class="cellB"><select name="number" id="n14"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
-            <div class="cellA"><select name="number" id="n15"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
-            <div class="cellA"><select name="number" id="n16"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
-            <div class="cellA"><select name="number" id="n17"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellA"><select name="number" id="n9"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellA"><select name="number" id="n10"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div v>
+            <div class="cellA"><select name="number" id="n11"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellB"><select name="number" id="n12"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellB"><select name="number" id="n13"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellB"><select name="number" id="n14"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellA"><select name="number" id="n15"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellA"><select name="number" id="n16"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellA"><select name="number" id="n17"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div >
 
-            <div class="cellA"><select name="number" id="n18"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
-            <div class="cellA"><select name="number" id="n19"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
-            <div class="cellA"><select name="number" id="n20"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
-            <div class="cellB"><select name="number" id="n21"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
-            <div class="cellB"><select name="number" id="n22"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
-            <div class="cellB"><select name="number" id="n23"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
-            <div class="cellA"><select name="number" id="n24"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
-            <div class="cellA"><select name="number" id="n25"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
-            <div class="cellA"><select name="number" id="n26"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
-
-
-
-            <div class="cellB"><select name="number" id="n27"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
-            <div class="cellB"><select name="number" id="n28"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
-            <div class="cellB"><select name="number" id="n29"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
-            <div class="cellA"><select name="number" id="n30"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
-            <div class="cellA"><select name="number" id="n31"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
-            <div class="cellA"><select name="number" id="n32"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
-            <div class="cellB"><select name="number" id="n33"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
-            <div class="cellB"><select name="number" id="n34"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
-            <div class="cellB"><select name="number" id="n35"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
-
-            <div class="cellB"><select name="number" id="n36"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
-            <div class="cellB"><select name="number" id="n37"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
-            <div class="cellB"><select name="number" id="n38"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
-            <div class="cellA"><select name="number" id="n39"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
-            <div class="cellA"><select name="number" id="n40"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
-            <div class="cellA"><select name="number" id="n41"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
-            <div class="cellB"><select name="number" id="n42"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
-            <div class="cellB"><select name="number" id="n43"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
-            <div class="cellB"><select name="number" id="n44"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
-
-            <div class="cellB"><select name="number" id="n45"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
-            <div class="cellB"><select name="number" id="n46"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
-            <div class="cellB"><select name="number" id="n47"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
-            <div class="cellA"><select name="number" id="n48"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
-            <div class="cellA"><select name="number" id="n49"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
-            <div class="cellA"><select name="number" id="n50"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
-            <div class="cellB"><select name="number" id="n51"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
-            <div class="cellB"><select name="number" id="n52"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
-            <div class="cellB"><select name="number" id="n53"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellA"><select name="number" id="n18"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellA"><select name="number" id="n19"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellA"><select name="number" id="n20"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellB"><select name="number" id="n21"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellB"><select name="number" id="n22"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellB"><select name="number" id="n23"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellA"><select name="number" id="n24"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellA"><select name="number" id="n25"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellA"><select name="number" id="n26"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
 
 
 
-            <div class="cellA"><select name="number" id="n54"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
-            <div class="cellA"><select name="number" id="n55"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
-            <div class="cellA"><select name="number" id="n56"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
-            <div class="cellB"><select name="number" id="n57"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
-            <div class="cellB"><select name="number" id="n58"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
-            <div class="cellB"><select name="number" id="n59"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
-            <div class="cellA"><select name="number" id="n60"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
-            <div class="cellA"><select name="number" id="n61"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
-            <div class="cellA"><select name="number" id="n62"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellB"><select name="number" id="n27"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellB"><select name="number" id="n28"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellB"><select name="number" id="n29"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellA"><select name="number" id="n30"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellA"><select name="number" id="n31"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellA"><select name="number" id="n32"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellB"><select name="number" id="n33"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellB"><select name="number" id="n34"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellB"><select name="number" id="n35"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
 
-            <div class="cellA"><select name="number" id="n63"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
-            <div class="cellA"><select name="number" id="n64"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
-            <div class="cellA"><select name="number" id="n65"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
-            <div class="cellB"><select name="number" id="n66"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
-            <div class="cellB"><select name="number" id="n67"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
-            <div class="cellB"><select name="number" id="n68"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
-            <div class="cellA"><select name="number" id="n69"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
-            <div class="cellA"><select name="number" id="n70"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
-            <div class="cellA"><select name="number" id="n71"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellB"><select name="number" id="n36"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellB"><select name="number" id="n37"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellB"><select name="number" id="n38"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellA"><select name="number" id="n39"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellA"><select name="number" id="n40"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellA"><select name="number" id="n41"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellB"><select name="number" id="n42"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellB"><select name="number" id="n43"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellB"><select name="number" id="n44"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
 
-            <div class="cellA"><select name="number" id="n72"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
-            <div class="cellA"><select name="number" id="n73"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
-            <div class="cellA"><select name="number" id="n74"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
-            <div class="cellB"><select name="number" id="n75"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
-            <div class="cellB"><select name="number" id="n76"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
-            <div class="cellB"><select name="number" id="n77"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
-            <div class="cellA"><select name="number" id="n78"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
-            <div class="cellA"><select name="number" id="n79"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
-            <div class="cellA"><select name="number" id="n80"><option value="0"> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellB"><select name="number" id="n45"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellB"><select name="number" id="n46"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellB"><select name="number" id="n47"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellA"><select name="number" id="n48"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellA"><select name="number" id="n49"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellA"><select name="number" id="n50"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellB"><select name="number" id="n51"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellB"><select name="number" id="n52"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellB"><select name="number" id="n53"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+
+
+
+            <div class="cellA"><select name="number" id="n54"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellA"><select name="number" id="n55"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellA"><select name="number" id="n56"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellB"><select name="number" id="n57"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellB"><select name="number" id="n58"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellB"><select name="number" id="n59"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellA"><select name="number" id="n60"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellA"><select name="number" id="n61"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellA"><select name="number" id="n62"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+
+            <div class="cellA"><select name="number" id="n63"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellA"><select name="number" id="n64"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellA"><select name="number" id="n65"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellB"><select name="number" id="n66"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellB"><select name="number" id="n67"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellB"><select name="number" id="n68"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellA"><select name="number" id="n69"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellA"><select name="number" id="n70"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellA"><select name="number" id="n71"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+
+            <div class="cellA"><select name="number" id="n72"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellA"><select name="number" id="n73"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellA"><select name="number" id="n74"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellB"><select name="number" id="n75"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellB"><select name="number" id="n76"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellB"><select name="number" id="n77"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellA"><select name="number" id="n78"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellA"><select name="number" id="n79"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
+            <div class="cellA"><select name="number" id="n80"><option value="0" selected> </option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option></select></div>
         </div>
 
         <div class="options">
             <h1>Sudoku</h1>
-            <p class="description">Apenas um exercício de html, css e javascript. O jogo você já conhece. Boa diversão!</p>
+            <p class="description">Apenas um exercício de html, css e javascript sem bibliotecas. Regras do jogo: Não pode repetir números na mesma linha, coluna e nem em quadrados de 9. Boa diversão!</p>
             <div>
                 <button id="btnNewGame">Novo Jogo</button>
                 Nível de dificuldade: 
@@ -213,22 +215,27 @@
         function get(id){
             return document.getElementById(id);
         }
+
         // Um atalha para obter elmentos pelo atributo name.
         function getByName(name){
             return document.getElementsByName(name);
         }
+
         // Retorna o índice de uma número a partir do número do tabuleiro (elemento do tipo select) mudado.
         function getIndex(element){
             return parseInt(element.id.replace('n', ''));
         }
+
         // Retorna a linha (iniciando em 0) do índice de um número do tabuleiro (elemento do tipo select).
         function getRow(i){
             return Math.trunc(i / 9);
         }
+
         // Retorna a coluna (iniciando em 0) do índice de um número do tabuleiro (elemento do tipo select).
         function getCol(i){
             return i % 9;
         }
+
         // Retorna o índice do primeirio elemento (o mais a esquerda e mais acima) de um quadrado local do tabuleiro.
         function getSquare(i){
             let r = getRow(i);
@@ -237,62 +244,23 @@
             let squareOffset = Math.trunc(c / 3) * 3;
             return rowStart + squareOffset;
         }
+
         // Retorna um índice aleatório de um dos números do tabuleiro.
         function getRandomIndex(){
             return Math.floor(Math.random() * 81); //retorna um número entre 0 e 80
         }
+
         // Retorna um valor aleatório de número do tabuleiro.
         function getRandomValue(){
             return Math.floor(Math.random() * 9) +1; //retorna um valor entre 1 e 9
         }
-        // Inicia um novo jogo
-        function newGame(){
-            // Limpa o tabuleiro para iniciar um novo jogo
-            let numbers = getByName('number');
-            numbers.forEach(element => {
+
+        // Limpa o tabuleiro para iniciar um novo jogo
+        function cleanTable(cells){
+            cells.forEach(element => {
                 element.value=0;
                 element.disabled=false;
             });
-
-            // Inicia procedimento de determinação dos valores fixos do tabuleiro
-
-            // A partir do nível de dificuldade selecionado,
-            let level = get('dificuldade').value; //nível de dificuldade
-            let qtd = level * 9; //determina quantidade de números fixos iniciais
-
-            // Variáveis auxiliares utilizadas
-            let element; // Número do tabuleiro (elemento do tipo select) em análise
-            let value; // Proposta de valor inicial em análise
-            let contadorSeguranca; // Contador de tentativas para evitar travar 
-
-            // Determina um valor inicial para os númeris fixos
-            for (i = 0; i < qtd; i++){ // Repetir qtd vezes (quantidade de números fixos iniciais)
-                do {  
-                    element = numbers[getRandomIndex()]; // Escolhe uma célula aleatoriamente...
-                } while (element.value != 0); // ...que nainda não tenha um valor
-
-                let conflitos; // Armazenará os conflitos encontrados
-                contadorSeguranca = 0; // Zera a quantidade de tentativas para a célula da vez
-
-                do {
-                    contadorSeguranca++; // Conta esta tentativa
-                    value = getRandomValue(); // Escolhe um valor aleatoriamente
-                    conflitos = new Array(); // Zera os conflitos
-                    
-                    // Verifica se o valor é possível para a célula
-                    checkRow(conflitos, element, numbers, value); // Verifica conflitos na mesma linha
-                    checkColumn(conflitos, element, numbers, value); // Verifica conflitos na mesma coluna
-                    checkSquare(conflitos, element, numbers, value); // Verifica conflitos no mesmo quadrado local
-                    if (contadorSeguranca >= 10){ // Se já tentou 10 vezes a mesma célula e não achou número possível...
-                        break; // ...força tentar outra célula
-                    }
-                } while (conflitos.length != 0); // Enquanto não encontrar um valor possível (sem conflitos)
-                
-                if (contadorSeguranca < 10){ // Se saiu da busaca após encontrar (sem esgotar as tentativas)
-                    element.disabled = true; // Torna a célula fixa e...
-                    element.value = value; // ...aplica o valor inicial
-                }
-            }
         }
 
         // Verifica se o número escolhido possui conflitos
@@ -309,6 +277,7 @@
                     event.target.value = 0;
                     alert([...new Set(conflitos)].join('\n')); // ...remove os duplicados e exibe mensagem
                 }
+                checkGame(); // Verifica se concluiu o jogo
             }
         }
 
@@ -331,6 +300,7 @@
                 }
             }
         }
+
         // Verifica conflitos na mesma linha
         // conflitos: variável onde serão depositados os conflitos encontrados
         // element: elemento do tipo select que representa a célula
@@ -350,6 +320,7 @@
                 }
             }
         }
+
         // Verifica conflitos no mesmo quadrado local
         // conflitos: variável onde serão depositados os conflitos encontrados
         // element: elemento do tipo select que representa a célula
@@ -369,6 +340,197 @@
                     }
                 }
             }
+        }
+
+        // Gerador genérico de sequências numéricas
+        // getFuntion: a função que vai gerar os valores
+        // qtd: a quantidade de números a gerar
+        function gerador(getFunction, qtd){
+            let arr = new Array();
+            let n;
+            for (i=0; i<qtd; i++){
+                do {
+                    n = getFunction();
+                } while (arr.indexOf(n) != -1);
+                arr.push(n);
+            }
+            return arr;
+        }
+
+        // Gera uma quantidade determinada de índices fixos.
+        // qtd: a quantidade de números a gerar.
+        function gerarIndicesFixos(qtd){
+            return gerador(getRandomIndex, qtd);
+        }
+
+        // Gera uma sequência aleatória de 9 dígitos distintos.
+        // Utilizada para gerar o tabuleiro inicial básico
+        function gerarSimbolos(){
+            return gerador(getRandomValue, 9);
+        }
+
+        // Retorna um array que representa o tabuleiro preenchido
+        // com a combinação básica de valores.
+        // Este método retorna os 9 símbolos em sequência, e em seguida desloca 3 (para não repetir no mesmo grupo).
+        // Quando terminar um grupo, o deslocamento é de 1, para evitar conflito vertical.
+        // Isso é realizado 3 vezes (uma vez para cada grupo).
+        // symbols: array contendo os símbolos para gerar o tabuleiro
+        function getFullTable(symbols){
+            let values = new Array(); // depósito de valores gerados
+            let n = 0; // base para obter os símbolos
+            let g = 0; // grupo
+            //gera sequencia de valores básica e embaralhada das 81 células
+            for (i=0; i<9; i++){ // para cada linha...
+                for (j=0; j<9; j++){ // para cada elemento da linha (coluna)...
+                    values.push(symbols[n%9]); // o módulo simula uma lista circular para obter ciclicamente os valores da lista de símbolos
+                    n++; 
+                }
+                n = n+3; // deslocamento para pasar para o próximo grupo
+                g++; // conta os giros do grupo
+                if (g == 3){ // a cada 3 giros (1 grupo), muda o deslocamento da linha
+                    n--;
+                    g=0;
+                }
+            }
+            return values;
+        }
+
+        // Realiza troca de posição entre dois valores contidos em um array
+        // values: array contendo os valores
+        // index1: índice do primeiro elemento a ser trocado
+        // index2: índice do segundo elemento a ser trocado
+        function changeValues(values, index1, index2){
+            values[index1] = values[index1] + values[index2];
+            values[index2] = values[index1] - values[index2];
+            values[index1] = values[index1] - values[index2];
+        }
+
+        // Troca de posição os valores entre duas linhas
+        // values: array contendo os valores
+        // index1: índice do primeiro elemento da primeira linha a ser trocada
+        // index2: índice do primeiro elemento da segunda linha a ser trocada
+        function changeRows(values, index1, index2){
+            for (i=0; i<9; i++){
+                changeValues(values, index1+i, index2+i);
+            }
+        }
+
+        // Mistura as linhas dentro de um mesmo grupo fazendo trocas aleastórias
+        // values: array contendo os valores
+        function mixRows(values){
+            for (g=0; g<=54; g=g+27){ // para cada grupo (índicies iniciais)
+                let changes = Math.floor(Math.random()*3); // sortear quantidade de trocas: de 0 a 2
+                for (c=0; c<changes; c++){ // para cada troca
+                    let rows = [0,1,2]; //linhas do grupo
+                    let r = Math.floor(Math.random()*3); // sortear a linha que fica fixa
+                    rows.splice(r, 1); // remover a linha sorteada da lista de troca (troca as outras duas)
+                    changeRows(values, g+(rows[0]*9), g+(rows[1]*9)); // realizar a troca entre as duas linhas selecionadas
+                }
+            }
+        }
+
+        // Troca de posição os valores entre duas colunas
+        // values: array contendo os valores
+        // index1: índice do primeiro elemento da primeira coluna a ser trocada
+        // index2: índice do primeiro elemento da segunda coluna a ser trocada
+        function changeCols(values, index1, index2){
+            for (i=0; i<9; i++){
+                changeValues(values, index1+(i*9), index2+(i*9));
+            }
+        }
+
+        // Mistura as colunas dentro de um mesmo grupo fazendo trocas aleastórias
+        // values: array contendo os valores
+        function mixColumns(values){
+            for (g=0; g<=6; g=g+3){ // para cada grupo (índicies iniciais)
+                let changes = Math.floor(Math.random()*3); // sortear quantidade de trocas: de 0 a 2
+                for (c=0; c<changes; c++){ // para cada troca
+                    let cols = [0,1,2]; //colunas do grupo
+                    let c = Math.floor(Math.random()*3); // sortear a coluna que fica fixa
+                    cols.splice(c, 1); // remover a coluna sorteada da lista de troca (troca as outras duas)
+                    changeCols(values, g+(cols[0]), g+(cols[1])); // realizar a troca entre as duas colunas selecionadas
+                }
+            }
+        }
+
+        // Verifica se concluiu o jogo e exibe mensagem
+        function checkGame(){
+            let cells = [...getByName('number')]; // Retorna todas as ceulas em um array
+            let found = false;
+            for (i=0; i<cells.length; i++){ // Para cada uma...
+                // ...se qualquer uma estiver em branco é porque não terminou, então não precisa verificar as outras
+                if (cells[i].value == 0){
+                    found = true;
+                    break;
+                }
+            }
+            if (!found){ // Se não encontrou nenhuma não preenchida é porque terminou
+                alert('Parabéns! você conseguiu!');
+            }
+        }
+
+        // Reflete os valores horizontalmente no tabuleiro
+        // values: array de valores 
+        function horizontalReflection(values){
+            for (c=0; c<4; c++){ // Da esquerda até a metade
+                for (r=0; r<=72; r=r+9){ // Para cada linha...
+                    changeValues(values, r+c, r+8-c);
+                }
+            }
+        }
+
+        // Reflete os valores verticalmente no tabuleiro
+        // values: array de valores 
+        function verticalReflection(values){
+            for (r=0; r<=27; r=r+9){ // De cima até a metade
+                for (c=0; c<9; c++){ // Para cada coluna...
+                    changeValues(values, r+c, 72-r+c);
+                }
+            }
+        }
+
+        // Exibe no console em formato de tabuleiro
+        // values: array de valores que representa a mesa
+        function print(values){
+            console.log('Estado atual:');
+            for (i=0; i<=72; i=i+9){
+                console.log( values.slice(i,i+9));
+            }
+        }
+
+        // Retorna true ou false aleatoriamente
+        function caraCoroa(){
+            return Math.floor(Math.random() * 2); //retorna um número entre 0 e 1
+        }
+
+        // Gera um novo jogo aleatoriamente baseado no níel de dificuldade selecionado, 
+        // que refletirá na quantidade inicial de valores fixos.
+        function newGame(){
+            let cells = [...getByName('number')]; // Retorna as células do tabuleiro (elementos do tipo select)
+            cleanTable(cells); // Limpa o tabuleiro
+            let simbolos = gerarSimbolos(); // Gera aleatoriamente os símbolos
+            let values = getFullTable(simbolos); // Preenche o tabuleiro na combinação básica utilizando os símbolos gerados
+
+            //reflexão horizontal
+            if (caraCoroa()){
+                horizontalReflection(values);
+            }
+            //reflexão vertical
+            if (caraCoroa()){
+                verticalReflection(values);
+            }
+
+            mixRows(values); //troca linhas do mesmo grupo aleatoriamente
+            mixColumns(values); //troca colunas do mesmo grupo aleatoriamente
+            
+            //definir indices que serão os valores fixos iniciais
+            let qtd = get('dificuldade').value * 9; 
+            let idxs = gerarIndicesFixos(qtd);
+            //aplicar definitivamente apenas os números fixos iniciais
+            idxs.forEach(i => {
+                cells[i].value = values[i];
+                cells[i].disabled = true;
+            });
         }
 
         // Configurações iniciais de eventos
